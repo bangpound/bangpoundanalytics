@@ -1,0 +1,8 @@
+name = !&# Analytics
+core = 7.x
+php = 5.2.4
+dependencies[] = ctools
+dependencies[] = google_analytics_reports
+dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_content

@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the !&# Analytics module.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function bangpoundanalytics_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && ($plugin_type == 'content_types' || $plugin_type == 'relationships')) {
+    return 'plugins/'. $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function bangpoundanalytics_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function bangpoundanalytics_views_api() {
+  return array("api" => "3.0");
+}
