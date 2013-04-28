@@ -199,7 +199,7 @@ function bangpoundanalytics_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'secondarycolumn1';
     $pane->type = 'views_panes';
-    $pane->subtype = 'metrics-panel_pane_1';
+    $pane->subtype = 'share_stats-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
