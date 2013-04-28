@@ -31,6 +31,7 @@ function bangpoundanalytics_google_analytics_detail_content_type_render($subtype
     return ' ';
   }
 
+  $block = new stdClass;
   $block->title = t('Content detail: @path', array('@path' => $path));
   $block->content = theme('google_analytics_reports_detail', $report);
 
