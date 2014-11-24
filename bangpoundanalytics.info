@@ -1,5 +1,6 @@
 name = !&# Analytics
 core = 7.x
+package = !&#
 php = 5.2.4
 dependencies[] = ctools
 dependencies[] = google_analytics_reports
