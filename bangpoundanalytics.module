@@ -15,27 +15,27 @@ function bangpoundanalytics_admin_paths() {
 }
 
 /**
- * Implements hook_ctools_plugin_directory().
+ * Implements hook_menu().
  */
-function bangpoundanalytics_ctools_plugin_directory($owner, $plugin_type) {
-  if ($owner == 'ctools' && ($plugin_type == 'content_types' || $plugin_type == 'relationships')) {
-    return 'plugins/'. $plugin_type;
-  }
+function bangpoundanalytics_menu() {
+  $items['node/%node/metrics'] = array(
+    'title' => 'Metrics',
+    'page callback' => 'bangpoundanalytics_page',
+    'page arguments' => array(1),
+    'access callback' => 'node_access',
+    'access arguments' => array('update', 1),
+    'type' => MENU_LOCAL_TASK,
+    'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+    'file' => 'bangpoundanalytics.pages.inc',
+  );
+  return $items;
 }
 
-/**
- * Implements hook_ctools_plugin_api().
- */
-function bangpoundanalytics_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "page_manager" && $api == "pages_default") {
-    return array("version" => "1");
-  }
-}
-
-/**
- * Implements hook_views_api().
- */
-function bangpoundanalytics_views_api() {
-  return array("api" => "3.0");
+function bangpoundanalytics_theme() {
+  return array(
+    'analytics' => array(
+      'variables' => array('path' => NULL),
+      'template' => 'analytics',
+    ),
+  );
 }

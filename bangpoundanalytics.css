@@ -1,0 +1,117 @@
+/**
+ * .control styles.
+ */
+google-analytics-view-selector::shadow .control,
+google-analytics-date-selector::shadow .control {
+    display: inline-block;
+    margin: 0 1em 1.5em 0;
+}
+google-analytics-view-selector::shadow .control:last-child,
+google-analytics-date-selector::shadow .control:last-child {
+    margin-right: 0;
+}
+google-analytics-view-selector::shadow .control > label,
+google-analytics-date-selector::shadow .control > label {
+    display: block;
+    padding: 0 0 .4em 2px;
+}
+
+/**
+ * Common styles.
+ */
+google-analytics-view-selector,
+google-analytics-date-selector {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+    padding: 1.5em 1.5em 0;
+}
+google-analytics-chart {
+    background: #fff;
+    float: left;
+    padding: 1.5em;
+    position: relative;
+    transition: opacity .2s ease;
+    width: 33%;
+    box-sizing: border-box;
+}
+google-analytics-chart:not([rendered]) {
+    display: none;
+}
+
+google-analytics-chart:first-of-type {
+    clear: both;
+}
+google-analytics-chart h3 {
+    border: 0;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+
+/**
+ * <google-analytics-dashboard> styles.
+ */
+google-analytics-dashboard {
+    display: block;
+    padding: 1.5em;
+    transition: opacity .3s ease;
+}
+google-analytics-dashboard:not([authorized]) {
+    opacity: .4;
+    pointer-events: none;
+}
+
+/**
+ * <google-analytics-view-selector> styles.
+ */
+google-analytics-view-selector::shadow label {
+    font-weight: bold;
+}
+google-analytics-view-selector::shadow select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 34px;
+    line-height: 20px;
+    min-width: 160px;
+    padding: 6px 12px;
+}
+google-analytics-view-selector::shadow select:focus {
+    border-color: #4d90fe;
+    outline: 0;
+}
+google-analytics-view-selector::shadow label {
+    font-weight: bold;
+}
+
+/**
+ * <google-analytics-date-selector> styles.
+ */
+google-analytics-date-selector::shadow label {
+    font-weight: bold;
+}
+google-analytics-date-selector::shadow input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: inherit;
+    font-weight: 400;
+    height: 34px;
+    line-height: 20px;
+    min-width: 160px;
+    padding: 6px;
+}
+google-analytics-date-selector::shadow input:focus {
+    border-color: #4d90fe;
+    outline: 0;
+}
+
+google-chart {
+    width: 100%;
+    height: 500px;
+}
