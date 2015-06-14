@@ -34,7 +34,7 @@ function bangpoundanalytics_menu() {
 function bangpoundanalytics_theme() {
   return array(
     'analytics' => array(
-      'variables' => array('path' => NULL),
+      'variables' => array('client_id' => NULL, 'ids' => NULL, 'path' => NULL),
       'template' => 'analytics',
     ),
   );

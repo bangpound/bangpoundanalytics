@@ -22,5 +22,9 @@ function bangpoundanalytics_page($node) {
   drupal_add_html_head($build, 'drupal_add_html_head_link:stylesheet:'. $href);
   drupal_add_html_head_link(array('rel' => 'import', 'href' => url($prefix .'/google-signin/google-signin.html')));
   drupal_add_html_head_link(array('rel' => 'import', 'href' => url($prefix .'/google-analytics/google-analytics.html')));
-  return theme('analytics', array('path' => $path));
+  return theme('analytics', array(
+    'client_id' => variable_get('bangpoundanalytics_client_id', ''),
+    'ids' => variable_get('bangpoundanalytics_ids', ''),
+    'path' => $path,
+  ));
 }

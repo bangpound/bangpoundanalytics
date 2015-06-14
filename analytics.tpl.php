@@ -1,11 +1,11 @@
-<google-signin client-id="846286205027-v9bq3rvmlg1sr2skpq0qhbj3k2m3l1kg.apps.googleusercontent.com"></google-signin>
+<google-signin client-id="<?php print $client_id; ?>"></google-signin>
 
 <google-analytics-dashboard>
 
   <google-analytics-date-selector></google-analytics-date-selector>
 
   <google-analytics-chart
-    ids="ga:3704377"
+    ids="<?php print $ids; ?>"
     type="line"
     metrics="ga:pageviews,ga:uniquePageviews"
     filters="ga:pagePath=~/<?php print $path ?>"
@@ -14,7 +14,7 @@
   </google-analytics-chart>
 
   <google-analytics-chart
-    ids="ga:3704377"
+    ids="<?php print $ids; ?>"
     type="column"
     metrics="ga:pageviews,ga:uniquePageviews"
     filters="ga:pagePath=~/<?php print $path ?>"
@@ -25,7 +25,7 @@
   </google-analytics-chart>
 
   <google-analytics-chart
-    ids="ga:3704377"
+    ids="<?php print $ids; ?>"
     type="geo"
     metrics="ga:pageviews"
     filters="ga:pagePath=~/<?php print $path ?>"
