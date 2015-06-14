@@ -1,4 +1,6 @@
-<google-signin client-id="<?php print $client_id; ?>"></google-signin>
+<header class="google-analytics">
+  <google-signin client-id="<?php print $client_id; ?>"></google-signin>
+</header>
 
 <google-analytics-dashboard>
 
@@ -27,10 +29,10 @@
   <google-analytics-chart
     ids="<?php print $ids; ?>"
     type="geo"
-    metrics="ga:pageviews"
+    metrics="ga:pageviews,ga:uniquePageviews"
     filters="ga:pagePath=~/<?php print $path ?>"
     dimensions="ga:country">
-    <h3>Users by Country</h3>
+    <h3>Page views by Country</h3>
   </google-analytics-chart>
 
 </google-analytics-dashboard>
